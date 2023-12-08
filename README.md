@@ -28,3 +28,35 @@ This project includes three Solidity smart contracts that implement an Airdrop s
 - constructor(address _token, bytes32 _merkleRoot)
 - claim(bytes32[] calldata merkleProof) external
 - canClaim(address claimer, bytes32[] calldata merkleProof) public view returns (bool)
+
+### Usage
+- Deploy the **Airdrop contract**, providing the address of the airdrop NFT token and the merkle root.
+- Candidates can claim their airdrop by calling the claim function with a valid merkle proof.
+  
+## 2. GauntletNFT Contract
+
+### Smart Contract Details
+- **Name:** GauntletNFT
+- **SPDX-License-Identifier:** MIT
+- **Dependencies:** OpenZeppelin's ERC721, ERC721URIStorage, AccessControl, Counters
+  
+### Functions
+
+- constructor()
+- safeMint(address to, string memory uri) public onlyRole(MINTER_ROLE)
+
+## Usage
+- Deploy the GauntletNFT contract.
+- Mint new NFTs by calling the safeMint function, which can only be called by addresses with the MINTER_ROLE.
+  
+##3. IERC721 Interface
+
+###Smart Contract Details
+**Name:** IERC721
+SPDX-License-Identifier: MIT
+### Functions
+- safeMint(addres to) external;
+
+## Usage
+- Implement this interface in contracts that should be able to mint NFTs.
+
