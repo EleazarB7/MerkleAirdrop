@@ -25,6 +25,6 @@ This project includes three Solidity smart contracts that implement an Airdrop s
 
 ### Functions
 
-constructor(address _token, bytes32 _merkleRoot)
-claim(bytes32[] calldata merkleProof) external
-canClaim(address claimer, bytes32[] calldata merkleProof) public view returns (bool)
+- constructor(address _token, bytes32 _merkleRoot)
+- claim(bytes32[] calldata merkleProof) external
+- canClaim(address claimer, bytes32[] calldata merkleProof) public view returns (bool)
